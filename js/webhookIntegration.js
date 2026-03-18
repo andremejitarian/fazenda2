@@ -39,7 +39,7 @@ class WebhookIntegration {
                     success: true,
                     data: {
                         message: response.message || 'Inscrição processada com sucesso',
-                        link: response.link || response.payment_link || response.pagamento_link
+                        link: response.output?.link || response.link || response.payment_link || response.pagamento_link
                     }
                 };
             } else {
